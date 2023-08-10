@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "646823487710",
+    "project_id": "moestuin-app-guy-janssen",
+    "storage_bucket": "moestuin-app-guy-janssen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646823487710:android:c88b41957814eac70d7a4f",
+        "android_client_info": {
+          "package_name": "com.janssen.guy.moestuinapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "646823487710-osr2hldespvi7b4csdcc2aori0bg6phs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.janssen.guy.moestuinapp",
+            "certificate_hash": "2d70ba06e58cb6b3583fddb881cb88931dbd6c8a"
+          }
+        },
+        {
+          "client_id": "646823487710-vql532tpa71jedkr82n1secu1pi50omt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD24CJRtnsObVlsjN2okSMFyVQ_Aopdc_M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "646823487710-4bv3acos6emodf7oa8quku3kbllgppj8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
