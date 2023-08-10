@@ -19,6 +19,7 @@ specifiers:
   '@angular/platform-browser-dynamic': ^15.0.0
   '@angular/router': ^15.0.0
   '@capacitor-firebase/authentication': ^5.1.0
+  '@capacitor/android': ^5.2.2
   '@capacitor/camera': ^5.0.7
   '@capacitor/cli': ^5.2.2
   '@capacitor/core': ^5.2.2
@@ -60,6 +61,7 @@ dependencies:
   '@angular/platform-browser-dynamic': 15.2.9_3gutb3tlgpthkmyhcebhmqcd4u
   '@angular/router': 15.2.9_jtrbwp6fv5a6g24rjlc6xtndhm
   '@capacitor-firebase/authentication': 5.1.0_inrtjzdejzhklvqyodmr6j25qu
+  '@capacitor/android': 5.2.2_@capacitor+core@5.2.2
   '@capacitor/camera': 5.0.7_@capacitor+core@5.2.2
   '@capacitor/core': 5.2.2
   '@capacitor/filesystem': 5.1.2_@capacitor+core@5.2.2
@@ -2866,6 +2868,14 @@ packages:
     dependencies:
       '@capacitor/core': 5.2.2
       firebase: 10.1.0_react-native@0.72.3
+    dev: false
+
+  /@capacitor/android/5.2.2_@capacitor+core@5.2.2:
+    resolution: {integrity: sha512-2kx5C2lJ/DSwPWS7fKvextWhg4AK3SQvQnHgp8+WX6SDYgphBNlGUh45N/qBoMeVM7lqjANJFGQDCk0FjimlWQ==}
+    peerDependencies:
+      '@capacitor/core': ^5.2.0
+    dependencies:
+      '@capacitor/core': 5.2.2
     dev: false
 
   /@capacitor/camera/5.0.7_@capacitor+core@5.2.2:

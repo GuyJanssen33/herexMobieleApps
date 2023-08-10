@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Moestuinapp</string>
+    <string name="title_activity_main">Moestuinapp</string>
+    <string name="package_name">com.janssen.guy.moestuinapp</string>
+    <string name="custom_url_scheme">com.janssen.guy.moestuinapp</string>
+</resources>
