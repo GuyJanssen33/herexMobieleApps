@@ -1,0 +1,79 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title>
+      Plant Toevoegen
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button [routerLink]="['/favorieten']" routerLinkActive="active" (click)="AuthService.url = ['/tabs', 'tab1', 'favorieten']">
+        <!--<ion-icon name="add-outline"></ion-icon>-->
+        <ion-label >Favorieten</ion-label>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Naam:</ion-label>
+      <ion-input placeholder="Naam plant"  [(ngModel)]="naam" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Categorie:</ion-label>
+      <ion-select placeholder="Selecteer categorie" [(ngModel)]="categorie">
+        <ion-select-option value="Blad- en steelgewassen">Blad- en steelgewassen</ion-select-option>
+        <ion-select-option value="Knol- en wortelgewassen">Knol- en wortelgewassen</ion-select-option>
+        <ion-select-option value="Ui-achtigen">Ui-achtigen</ion-select-option>
+        <ion-select-option value="Koolsoorten">Koolsoorten</ion-select-option>
+        <ion-select-option value="Peulvruchten">Peulvruchten</ion-select-option>
+        <ion-select-option value="Gebleekte Gewassen">Gebleekte Gewassen</ion-select-option>
+        <ion-select-option value="Vruchtgewassen">Vruchtgewassen</ion-select-option>
+
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Zaaitijd onder glas:</ion-label>
+      <ion-input  placeholder="jan-dec"  [(ngModel)]="zaaitijd"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Zaaitijd Buiten:</ion-label>
+      <ion-input  placeholder="jan-dec"   [(ngModel)]="zaaitijdBuiten"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Oogsttijd:</ion-label>
+      <ion-input  placeholder="jan-dec"  [(ngModel)]="oogsttijd"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Tijd van zaaien tot kiem:</ion-label>
+      <ion-input  placeholder="aantal dagen"  [(ngModel)]="zaaienTotKiem"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tijd van zaaien tot oogst:</ion-label>
+      <ion-input  placeholder="aantal dagen"  [(ngModel)]="zaaienTotOogst"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Plantafstand:</ion-label>
+      <ion-input  placeholder="afstand in cm"
+                  [(ngModel)]="plantafstand"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Details (weblink):</ion-label>
+      <ion-input  [value]="details" placeholder="weblink" [(ngModel)]="details">
+
+      </ion-input>
+    </ion-item>
+
+  </ion-list>
+  <ion-button expand="full" shape="round" (click)="addPlant(plant)">Add to list </ion-button>
+
+</ion-content>
+
+

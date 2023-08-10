@@ -1,0 +1,125 @@
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="fade">
+    <ion-toolbar color="success">
+      <ion-title class="HeaderTitle">Moestuin app</ion-title>
+      <ion-buttons slot="primary">
+        <ion-button [routerLink]="['favorieten']" routerLinkActive="active" (click)="AuthService.url = ['/tabs', 'tab1', 'favorieten']">
+          <!--<ion-icon name="add-outline"></ion-icon>-->
+          <ion-label >Favorieten</ion-label>
+        </ion-button>
+
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+  <ion-accordion-group>
+    <ion-accordion value="first" toggleIcon="caret-down-circle" toggleIconSlot="end">
+      <ion-item slot="header" color="light">
+        <ion-label>Blad en steelgewassen</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-list [inset]="true" *ngFor="let plant of BladList" >
+          <ion-item button [routerLink]="['details', plant._id]">
+            <ion-label>
+              <h2>{{plant.naam}}</h2>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second" toggleIcon="caret-down-circle" toggleIconSlot="end">
+      <ion-item slot="header" color="light">
+        <ion-label>Knol- en wortelgewassen</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-list [inset]="true" *ngFor="let plant of KnolList">
+          <ion-item button [routerLink]="['details', plant._id]">
+            <ion-label>
+              <h2>{{plant.naam}}</h2>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third" toggleIcon="caret-down-circle" toggleIconSlot="end">
+      <ion-item slot="header" color="light">
+        <ion-label>Ui-achtigen</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-list [inset]="true" *ngFor="let plant of UiList">
+          <ion-item button [routerLink]="['details', plant._id]">
+            <ion-label>
+              <h2>{{plant.naam}}</h2>
+            </ion-label>
+
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="fourth" toggleIcon="caret-down-circle" toggleIconSlot="end">
+      <ion-item slot="header" color="light">
+        <ion-label>Koolsoorten</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-list [inset]="true" *ngFor="let plant of KoolList">
+          <ion-item button [routerLink]="['details', plant._id]">
+            <ion-label>
+              <h2>{{plant.naam}}</h2>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="fifth" toggleIcon="caret-down-circle" toggleIconSlot="end">
+      <ion-item slot="header" color="light">
+        <ion-label>Peulvruchten</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-list [inset]="true" *ngFor="let plant of PeulList">
+          <ion-item button [routerLink]="['details', plant._id]">
+            <ion-label>
+              <h2>{{plant.naam}}</h2>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="sixth" toggleIcon="caret-down-circle" toggleIconSlot="end">
+      <ion-item slot="header" color="light">
+        <ion-label>Gebleekte Gewassen</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-list [inset]="true" *ngFor="let plant of GebleekteList" >
+          <ion-item button [routerLink]="['details', plant._id]">
+            <ion-label>
+              <h2>{{plant.naam}}</h2>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="seventh" toggleIcon="caret-down-circle" toggleIconSlot="end">
+      <ion-item slot="header" color="light">
+        <ion-label>Vruchtgewassen</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-list [inset]="true" *ngFor="let plant of VruchtList" >
+          <ion-item button [routerLink]="['details', plant._id]">
+            <ion-label>
+              <h2>{{plant.naam}}</h2>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-accordion>
+
+  </ion-accordion-group>
+  <ion-button expand="block" [routerLink]="['addplant']" (click)="AuthService.url = ['/tabs', 'tab1', 'addplant']">Plant toevoegen</ion-button>
+</ion-content>
+
+
+
+

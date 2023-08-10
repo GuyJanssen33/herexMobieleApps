@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title>
+      Plant Details
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button [routerLink]="['']" routerLinkActive="active">
+        <!--<ion-icon name="add-outline"></ion-icon>-->
+        <ion-label >Home</ion-label>
+      </ion-button>
+    <ion-button [routerLink]="['/favorieten']" routerLinkActive="active" (click)="AuthService.url = ['/tabs', 'tab1', 'favorieten']">
+      <!--<ion-icon name="add-outline"></ion-icon>-->
+      <ion-label >Favorieten</ion-label>
+    </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Naam:</ion-label>
+      <ion-input placeholder="Enter text" [(ngModel)]="naam "></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Categorie:</ion-label>
+      <ion-input placeholder="Enter text" [(ngModel)]="categorie "></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Zaaitijd onder glas:</ion-label>
+      <ion-input  placeholder="jan-dec" [(ngModel)]="zaaitijd"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Zaaitijd Buiten:</ion-label>
+      <ion-input  value="jan-dec" [(ngModel)]="zaaitijdBuiten"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Oogsttijd:</ion-label>
+      <ion-input  placeholder="jan-dec" [(ngModel)]="oogsttijd"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Tijd van zaaien tot kiem:</ion-label>
+      <ion-input  placeholder="aantal dagen" [(ngModel)]="zaaienTotKiem"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tijd van zaaien tot oogst:</ion-label>
+      <ion-input  placeholder="aantal dagen" [(ngModel)]="zaaienTotOogst"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Plantafstand:</ion-label>
+      <ion-input  placeholder="1-100" [(ngModel)]="plantafstand"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Details (weblink):</ion-label>
+      <ion-input  [(ngModel)]="details">
+        <a *ngIf="'linkUrl'|| 'No link available'" [href]="linkUrl" target="_blank" >{{details}}</a>
+      </ion-input>
+    </ion-item>
+
+  </ion-list>
+  <ion-button expand="full" shape="round" (click)="AddPlantToFavorietenList()">Voeg toe aan favorieten </ion-button>
+  <ion-button expand="full" color="warning" shape="round" (click)="updatePlant(plant)">Plant aanpassen </ion-button>
+  <ion-button expand="full" color="danger" shape="round" (click)="deletePlant(plant)">Plant Verwijderen </ion-button>
+</ion-content>
+

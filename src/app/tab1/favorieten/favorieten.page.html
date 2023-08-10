@@ -1,0 +1,61 @@
+<ion-header collapse="fade">
+  <ion-toolbar color="success">
+    <ion-title class="HeaderTitle">Moestuin app</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-button  routerLinkActive="active">
+          <!--<ion-icon name="add-outline"></ion-icon>-->
+          <ion-label [routerLink]="['']">Terug naar begin</ion-label>
+        </ion-button>
+      </ion-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list [inset]="true" *ngFor="let plant of favorietePlanten" >
+    <ion-row>
+
+        <ion-col size="4">
+
+          <ion-item >
+           <ion-label>
+            <h2>{{plant?.naam}}</h2>
+           </ion-label>
+          </ion-item></ion-col>
+        <ion-col size="4">
+        <ion-row>
+       <ion-item>
+         <ion-label>
+           <h3>onder glas:{{plant?.zaaitijd}}</h3>
+         </ion-label>
+       </ion-item>
+        </ion-row>
+        <ion-row>
+          <ion-item>
+            <ion-label>
+              <h3>buiten: {{plant?.zaaitijdBuiten}}</h3>
+            </ion-label>
+          </ion-item>
+        </ion-row>
+      </ion-col>
+
+      <ion-col size="2">
+        <ion-row>
+          <ion-item>
+            <ion-button [routerLink]="['details', plant._id]" color="light">
+              <ion-icon name="information-circle-outline"></ion-icon>
+            </ion-button>
+          </ion-item>
+          <ion-item>
+            <ion-button (click)="removeItem(plant._id)" color="danger">
+            <ion-icon name="trash-outline"></ion-icon>
+            </ion-button>
+          </ion-item>
+
+        </ion-row>
+        </ion-col>
+    </ion-row>
+  </ion-list>
+</ion-content>
