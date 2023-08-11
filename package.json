@@ -10,7 +10,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "android-resources": "capacitor-assets generate --iconBackgroundColor #eeeeee --iconBackgroundColorDark #222222 --splashBackgroundColor #eeeeee --splashBackgroundColorDark #111111 --logoSplashScale 0.5  --android"
+    "android-resources": "capacitor-assets generate --iconBackgroundColor #eeeeee --iconBackgroundColorDark #222222 --splashBackgroundColor #eeeeee --splashBackgroundColorDark #111111 --logoSplashScale 0.5  --android",
+    "pwa-resources": "pwa-asset-generator ./resources/icon.png ./src/assets/icons -m ./src/manifest.webmanifest -i ./src/index.html"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +22,7 @@
     "@angular/platform-browser": "^15.0.0",
     "@angular/platform-browser-dynamic": "^15.0.0",
     "@angular/router": "^15.0.0",
+    "@angular/service-worker": "^15.0.0",
     "@capacitor-firebase/authentication": "^5.1.0",
     "@capacitor/android": "^5.2.2",
     "@capacitor/camera": "^5.0.7",

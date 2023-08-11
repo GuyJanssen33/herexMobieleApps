@@ -18,6 +18,7 @@ specifiers:
   '@angular/platform-browser': ^15.0.0
   '@angular/platform-browser-dynamic': ^15.0.0
   '@angular/router': ^15.0.0
+  '@angular/service-worker': ^15.0.0
   '@capacitor-firebase/authentication': ^5.1.0
   '@capacitor/android': ^5.2.2
   '@capacitor/camera': ^5.0.7
@@ -60,6 +61,7 @@ dependencies:
   '@angular/platform-browser': 15.2.9_saasvbjwcyvrg46rivfba7ybci
   '@angular/platform-browser-dynamic': 15.2.9_3gutb3tlgpthkmyhcebhmqcd4u
   '@angular/router': 15.2.9_jtrbwp6fv5a6g24rjlc6xtndhm
+  '@angular/service-worker': 15.2.9_saasvbjwcyvrg46rivfba7ybci
   '@capacitor-firebase/authentication': 5.1.0_jeiur7usalypcqi5nh5g7dapku
   '@capacitor/android': 5.2.2_@capacitor+core@5.2.2
   '@capacitor/camera': 5.0.7_@capacitor+core@5.2.2
@@ -75,7 +77,7 @@ dependencies:
   zone.js: 0.11.8
 
 devDependencies:
-  '@angular-devkit/build-angular': 15.2.9_c4e2vlgjzfguug2ymosqfkxxea
+  '@angular-devkit/build-angular': 15.2.9_3q6npu4pttpledppcmasqnzxra
   '@angular-eslint/builder': 15.2.1_3rubbgt5ekhqrcgx4uwls3neim
   '@angular-eslint/eslint-plugin': 15.2.1_3rubbgt5ekhqrcgx4uwls3neim
   '@angular-eslint/eslint-plugin-template': 15.2.1_3rubbgt5ekhqrcgx4uwls3neim
@@ -149,7 +151,7 @@ packages:
       - chokidar
     dev: true
 
-  /@angular-devkit/build-angular/15.2.9_c4e2vlgjzfguug2ymosqfkxxea:
+  /@angular-devkit/build-angular/15.2.9_3q6npu4pttpledppcmasqnzxra:
     resolution: {integrity: sha512-djOo2Q22zLrxPccSbINz93hD+pES/nNPoze4Ys/0IdtMlLmxO/YGsA+FG5eNeNAf2jK/JRoNydaYOh7XpGoCzA==}
     engines: {node: ^14.20.0 || ^16.13.0 || >=18.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
@@ -183,6 +185,7 @@ packages:
       '@angular-devkit/build-webpack': 0.1502.9_s3sugpttl6jjqsvaz4l5e6h25m
       '@angular-devkit/core': 15.2.9_chokidar@3.5.3
       '@angular/compiler-cli': 15.2.9_mxmh245msghwo372bemuogc4da
+      '@angular/service-worker': 15.2.9_saasvbjwcyvrg46rivfba7ybci
       '@babel/core': 7.20.12
       '@babel/generator': 7.20.14
       '@babel/helper-annotate-as-pure': 7.18.6
@@ -445,7 +448,6 @@ packages:
       '@angular/core': 15.2.9_rxjs@7.5.7+zone.js@0.11.8
       rxjs: 7.5.7
       tslib: 2.6.1
-    dev: false
 
   /@angular/compiler-cli/15.2.9_mxmh245msghwo372bemuogc4da:
     resolution: {integrity: sha512-zsbI8G2xHOeYWI0hjFzrI//ZhZV9il/uQW5dAimfwJp06KZDeXZ3PdwY9JQslf6F+saLwOObxy6QMrIVvfjy9w==}
@@ -601,6 +603,18 @@ packages:
       rxjs: 7.5.7
       tslib: 2.6.1
     dev: false
+
+  /@angular/service-worker/15.2.9_saasvbjwcyvrg46rivfba7ybci:
+    resolution: {integrity: sha512-qM/lcrjaxIfpKj174mMWedtGfLNgLl5m7p9mPNODFjqp5lQj3fTTS643ix5Pr0onwbvbNbXu4g67/WXJqap0eA==}
+    engines: {node: ^14.20.0 || ^16.13.0 || >=18.10.0}
+    hasBin: true
+    peerDependencies:
+      '@angular/common': 15.2.9
+      '@angular/core': 15.2.9
+    dependencies:
+      '@angular/common': 15.2.9_y2jhobf6kvgahxfp7f76cbkcj4
+      '@angular/core': 15.2.9_rxjs@7.5.7+zone.js@0.11.8
+      tslib: 2.6.1
 
   /@assemblyscript/loader/0.10.1:
     resolution: {integrity: sha512-H71nDOOL8Y7kWRLqf6Sums+01Q5msqBW2KhDUTemh1tvY04eSkSXrK0uj/4mmY0Xr16/3zyZmsrxN7CKuRbNRg==}
