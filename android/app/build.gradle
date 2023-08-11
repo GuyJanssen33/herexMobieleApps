@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\herexmobapp\\key.jks')
+            storePassword 'Moestuin'
+            keyAlias 'Moestuinapp'
+            keyPassword 'Moestuin'
+        }
+    }
     namespace "com.janssen.guy.moestuinapp"
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
@@ -20,7 +28,11 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+          signingConfig signingConfigs.debug
         }
+      debug {
+        signingConfig signingConfigs.debug
+      }
     }
 }
 

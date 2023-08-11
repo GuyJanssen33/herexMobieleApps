@@ -10,6 +10,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { provideFirebaseApp, initializeApp} from '@angular/fire/app';
 import { environment} from '../environments/environment';
 import { getAuth, provideAuth} from '@angular/fire/auth';
+import {enableMultiTabIndexedDbPersistence,
+  getFirestore, provideFirestore} from '@angular/fire/firestore';
 
 
 const firebaseConfig = {
@@ -25,7 +27,9 @@ const firebaseConfig = {
   declarations: [AppComponent],
   entryComponents:[],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, IonicModule,
-    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)), provideAuth(() => getAuth())],
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),provideAuth(() => getAuth())],
+
+
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
